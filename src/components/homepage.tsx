@@ -60,7 +60,7 @@ export function Homepage() {
               Resources
             </Link>
           </nav>
-          <Button variant="primary">Get Started</Button>
+          <Button variant="outline">Get Started</Button>
         </div>
       </header>
       <main>
@@ -76,7 +76,7 @@ export function Homepage() {
                   fund with confidence.
                 </p>
                 <div className="flex space-x-4">
-                  <Button variant="primary">Learn More</Button>
+                  <Button variant="outline">Learn More</Button>
                   <Button variant="secondary">Contact Us</Button>
                 </div>
               </div>
@@ -209,7 +209,7 @@ export function Homepage() {
   )
 }
 
-function BarChart(props) {
+function BarChart(props: any) {
   return (
     <div {...props}>
       <ResponsiveBar
@@ -263,7 +263,7 @@ function BarChart(props) {
 }
 
 
-function DotChart(props) {
+function DotChart(props: any) {
   return (
     <div {...props}>
       <ResponsiveScatterPlot
@@ -333,7 +333,7 @@ function DotChart(props) {
 }
 
 
-function HeatmapChart(props) {
+function HeatmapChart(props: any) {
   return (
     <div {...props}>
       <ResponsiveHeatMap
@@ -578,7 +578,7 @@ function HeatmapChart(props) {
 }
 
 
-function LineChart(props) {
+function LineChart(props: any) {
   return (
     <div {...props}>
       <ResponsiveLine
@@ -652,7 +652,7 @@ function LineChart(props) {
 }
 
 
-function StackedbarChart(props) {
+function StackedbarChart(props: any) {
   return (
     <div {...props}>
       <ResponsiveBar

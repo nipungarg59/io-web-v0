@@ -32,13 +32,37 @@ To read more about using these font, please visit the Next.js documentation:
 }
 **/
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
+// import { Button } from "@/components/ui/button"
 import { ResponsiveLine } from "@nivo/line"
 import { ResponsiveHeatMap } from "@nivo/heatmap"
 import { ResponsiveScatterPlot } from "@nivo/scatterplot"
 import { ResponsiveBar } from "@nivo/bar"
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+
+
+
+const modalStyle = {
+  position: 'absolute' as 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'rgb(18, 18, 18)',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
+
 
 export function Homepage() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <>
       <header className="bg-gray-900 text-white py-4 px-6 md:px-8 lg:px-10">
@@ -46,7 +70,7 @@ export function Homepage() {
           <Link className="text-xl font-bold" href="#">
             Insta Option
           </Link>
-          <nav className="hidden md:flex space-x-4">
+          {/* <nav className="hidden md:flex space-x-4">
             <Link className="hover:text-gray-300" href="#">
               Financial Modeling
             </Link>
@@ -59,8 +83,25 @@ export function Homepage() {
             <Link className="hover:text-gray-300" href="#">
               Resources
             </Link>
-          </nav>
-          <Button variant="outline">Get Started</Button>
+          </nav> */}
+          <div>
+          <Button onClick={handleOpen}>Get Started</Button>
+
+          <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box sx={modalStyle}>
+              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                Stay Tuned. Coming Soon!!
+              </Typography>
+            </Box>
+          </Modal>  
+          </div>
+          
+          {/* <Button variant="outline">Get Started</Button> */}
         </div>
       </header>
       <main>
@@ -75,17 +116,17 @@ export function Homepage() {
                   Leverage advanced AI models and statistical techniques to outperform the market and manage your hedge
                   fund with confidence.
                 </p>
-                <div className="flex space-x-4">
+                {/* <div className="flex space-x-4">
                   <Button variant="outline">Learn More</Button>
                   <Button variant="secondary">Contact Us</Button>
-                </div>
+                </div> */}
               </div>
               <div>
                 <img
                   alt="Quantitative Finance"
                   className="w-full h-auto rounded-lg"
                   height="400"
-                  src="/placeholder.svg"
+                  src='https://bsmedia.business-standard.com/_media/bs/img/misc/2023-03/21/full/market-stocks-stock-market-trading-stock-market-1679390474-25992620.jpg'
                   style={{
                     aspectRatio: "600/400",
                     objectFit: "cover",
@@ -191,8 +232,8 @@ export function Homepage() {
       </main>
       <footer className="bg-gray-900 text-white py-8 px-4 md:px-6 lg:px-8">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm mb-4 md:mb-0">© 2024 Quant Strategies. All rights reserved.</p>
-          <nav className="flex space-x-4">
+          <p className="text-sm mb-4 md:mb-0">© 2024 Insta Option. All rights reserved.</p>
+          {/* <nav className="flex space-x-4">
             <Link className="hover:text-gray-300" href="#">
               Terms of Service
             </Link>
@@ -202,7 +243,7 @@ export function Homepage() {
             <Link className="hover:text-gray-300" href="#">
               Contact Us
             </Link>
-          </nav>
+          </nav> */}
         </div>
       </footer>
     </>

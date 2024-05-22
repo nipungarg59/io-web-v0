@@ -68,7 +68,7 @@ export function Homepage() {
           <div className="container mx-auto px-4 md:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
               <div>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                <h1 className="text-3xl text-gray-900 md:text-4xl lg:text-5xl font-bold mb-4">
                   Unlock the Power of Quantitative Finance
                 </h1>
                 <p className="text-gray-700 text-lg md:text-xl mb-6">

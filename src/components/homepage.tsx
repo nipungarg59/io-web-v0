@@ -44,7 +44,7 @@ export function Homepage() {
       <header className="bg-gray-900 text-white py-4 px-6 md:px-8 lg:px-10">
         <div className="container mx-auto flex items-center justify-between">
           <Link className="text-xl font-bold" href="#">
-            Quant Strategies
+            Insta Option
           </Link>
           <nav className="hidden md:flex space-x-4">
             <Link className="hover:text-gray-300" href="#">
